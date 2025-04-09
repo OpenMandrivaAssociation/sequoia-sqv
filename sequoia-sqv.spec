@@ -49,10 +49,10 @@ cargo build --release --frozen --features 'crypto-nettle'
 
 %install
 install -Dm 755 target/release/sqv -t %{buildroot}%{_bindir}/
-install -Dm 644 target/release/build/sequoia-sqv-65cb67d5b438c143/out/shell-completions/sqv.bash %{buildroot}/%{_datadir}/bash-completion/completions/sqv.bash
-install -Dm 644 target/release/build/sequoia-sqv-65cb67d5b438c143/out/shell-completions/_sqv %{buildroot}/%{_datadir}/zsh/site-functions/_sqv
-install -Dm 644 target/release/build/sequoia-sqv-65cb67d5b438c143/out/shell-completions/sqv.fish %{buildroot}/%{_datadir}/fish/vendor_completions.d/sqv.fish
-install -Dm 644 target/release/build/sequoia-sqv-65cb67d5b438c143/out/man-pages/sqv.1 %{buildroot}/%{_mandir}/sqv.1
+install -Dm 644 target/release/build/sequoia-sqv-*/out/shell-completions/sqv.bash %{buildroot}/%{_datadir}/bash-completion/completions/sqv.bash
+install -Dm 644 target/release/build/sequoia-sqv-*/out/shell-completions/_sqv %{buildroot}/%{_datadir}/zsh/site-functions/_sqv
+install -Dm 644 target/release/build/sequoia-sqv-*/out/shell-completions/sqv.fish %{buildroot}/%{_datadir}/fish/vendor_completions.d/sqv.fish
+install -Dm 644 target/release/build/sequoia-sqv-*/out/man-pages/sqv.1 %{buildroot}/%{_mandir}/sqv.1
  install -Dm 644 README.md %{buildroot}%{_datadir}/doc/%{name}/README.md
 
 %files -n %{libname}
