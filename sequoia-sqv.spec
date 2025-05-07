@@ -4,7 +4,7 @@
 
 Name:		sequoia-sqv
 Version:	1.3.0
-Release:	1
+Release:	2
 Source0:	https://gitlab.com/sequoia-pgp/sequoia-sqv/-/archive/v%{version}/%{name}-%{version}.tar.gz
 Source1:    %{name}-%{version}-vendor.tar.gz
 Summary:	A simple signature verification program
